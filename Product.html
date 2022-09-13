@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Menu trái -->
+        <div class="nav_left" id="nav_left">
+            <h2 id="h1">Menu</h2>
+            <div id="logo"><img src="https://www.tek4tv.vn/assets/onepage/img/logo/logo.png" alt=""></div>
+            <div class="icon_left"><a href=""><i class="fa-sharp fa-solid fa-chart-line"></i>
+                    <div id="icon_left_db">Dashboards</div>
+                </a></div>
+            <div class="icon_left"><a href=""><i class="fa-solid fa-briefcase"></i>
+                    <div id="icon_left_w">Work</div>
+                </a></div>
+            <div class="icon_left"><a href=""><i class="fa-solid fa-users"></i>
+                    <div id="icon_left_u">Users</div>
+                </a></div>
+        </div>
+
+        <div id="right-content">
+            <!-- Menu trên -->
+            <div class="nav_top">
+                <div id="hamburger"><button onclick="show()"><i class="fa-solid fa-bars"></i></button></div>
+                <div class="search">
+                    <div class="search_input"><input type="text" placeholder="Search..."></div>
+                    <div class="search_button"><button><i class="fa-solid fa-magnifying-glass"></button></i></div>
+                </div>
+                <div class="notification"><i class="fa-sharp fa-solid fa-bell"></i></div>
+                <div class="user_box">
+                    <div class="user_box_img"><img class="rounded-circle header-profile-user"
+                            src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg"
+                            alt="Header Avatar"></div>
+                    <div class="user_box_title">
+                        <div class="user_box_name">Name</div>
+                        <div>Position</div>
+                    </div>
+                </div>
+            </div>
+            <!-- view page -->
+            <div class="contain">
+                <div class="page_title">
+                    <div>User List</div>
+                </div>
+                <div class="page_container">
+                    <div class="contronler">
+                        <div class="filter"><button onclick="showdb()"><i class="fa-solid fa-filter"></i>Filter</button></div>
+                        <div class="filter"><button onclick="showbtnadd()"><i class="fa-solid fa-user-plus"></i>Add</button></div>
+                        <div class="filter-dashboards" id="filter-dashboards">
+                            <div class="filter-dashboards-title">Filter Optines</div>
+                            <div class="selection">
+                                <span>Role</span>
+                                <select>
+                                    <option value="">None</option>
+                                    <option value="">Administer</option>
+                                    <option value="">Employee</option>
+                                </select>
+                            </div>
+                            <div class="selection">
+                                <span>Gender</span>
+                                <select>
+                                    <option value="">None</option>
+                                    <option value="">Female</option>
+                                    <option value="">Male</option>
+                                </select>
+                            </div>
+                            <button>Apply</button>
+                        </div>
+                    </div>
+                    <div class="page_view">
+                        <table class="user_table">  
+                                <th class="userid">ID</th>
+                                <th>NAME</th>
+                                <th>Avatar</th>
+                                <th>ROLE</th>
+                                <th>EMAIL</th>
+                                <th>ADRESS</th>
+                                <th>PHONE</th>
+                                <th>GENDER</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                                <tr> 
+                                    <td>1</td>
+                                    <td>Manh</td>
+                                    <td><img src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg"
+                                            alt=""></td>
+                                    <td>FOULDER</td>
+                                    <td>MANHHAI@gmail.com</td>
+                                    <td>HANOI</td>
+                                    <td>0911051512</td>
+                                    <td>Nam</td>
+                                    <td>GOOD</td>
+                                    <td><button id="btnview" class="btnview" onclick="showbtn()">ACTIONS</button></td>
+                                </tr>
+                                <tr> 
+                                    <td>1</td>
+                                    <td>Manh</td>
+                                    <td><img src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg"
+                                            alt=""></td>
+                                    <td>FOULDER</td>
+                                    <td>MANHHAI@gmail.com</td>
+                                    <td>HANOI</td>
+                                    <td>0911051512</td>
+                                    <td>Nam</td>
+                                    <td>GOOD</td>
+                                    <td><button class="btnview" onclick="showbtn()">ACTIONS</button></td>
+                                </tr>
+                        </table>
+                        <div class="btn_actions" id="btn_actions">
+                            <button>EDIT</button>
+                            <button>DELETE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- Thêm mới User -->
+        <div class="container_add_user" id="container_add_user">
+            <div class="add_user_box">
+                <div class="add_user_top">
+                    <div class="add_user_title">Add User</div>
+                    <div class="add_user_btn"><button onclick="btncloseadd()"><i class="fa-solid fa-xmark"></i></button></div>
+                </div>
+                <div class="add_user_bottom">
+                    <div class="avatar">
+                        <div class="avatar_title">Avatar</div>
+                        <div class="avatar_img"><img src="https://themesbrand.com/velzon/html/saas/assets/images/users/avatar-1.jpg" alt=""></div>
+                    </div>
+                    <div class="add_input_container">
+                        <div class="add_input_title">Full Name</div>
+                        <div class="add_input"><input type="text" placeholder="Name"></div>
+                    </div>
+                    <div class="add_input_container">
+                        <div class="add_input_title">Email</div>
+                        <div class="add_input"><input type="text" placeholder="Email"></div>
+                    </div>
+                    <div class="add_input_container">
+                        <div class="add_input_title">Phone</div>
+                        <div class="add_input"><input type="text" placeholder="Phone"></div>
+                    </div>
+                    <div class="add_input_container">
+                        <div class="add_input_title">Adress</div>
+                        <div class="add_input"><input type="text" placeholder="Adress"></div>
+                    </div>
+                    <div class="add_input_container">
+                        <div class="add_input_title">User Name</div>
+                        <div class="add_input"><input type="text" placeholder="User Name"></div>
+                    </div>
+                    <div class="add_input_container">
+                        <div class="add_input_title">Passwoord</div>
+                        <div class="add_input"><input type="text" placeholder="Passwoord"></div>
+                    </div>
+                    <div class="select_user_container">
+                        <div class="select_role">
+                            <h4>Role</h4>
+                            <select name="" id="">
+                                <option value="">Administer</option>
+                                <option value="">Employee</option>
+                            </select>
+                        </div>
+                        <div class="select_gender">
+                            <h4>Gender</h4>
+                            <select name="" id="">
+                                <option value="">Female</option>
+                                <option value="">Male</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn_user_container">
+                        <div class="btn_reset"><button>Reset</button></div>
+                        <div class="btn_add_cf"><button>Accept</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>function show() {
+        document.getElementById('right-content').classList.toggle('active')
+        document.getElementById('nav_left').classList.toggle('active')
+        document.getElementById('h1').classList.toggle('active')
+        document.getElementById('logo').classList.toggle('active')
+        document.getElementById('icon_left_db').classList.toggle('active')
+        document.getElementById('icon_left_w').classList.toggle('active')
+        document.getElementById('icon_left_u').classList.toggle('active')
+    } 
+    function showdb(){
+        document.getElementById('filter-dashboards').classList.toggle('active')
+    }   
+    function showbtn(){
+        document.getElementById('btn_actions').classList.toggle('active')
+        document.getElementById('btnview').classList.toggle('active')
+    }
+    function showbtnadd(){
+        document.getElementById('container_add_user').classList.toggle('active')
+    }
+    function btncloseadd(){
+        document.getElementById('container_add_user').classList.toggle('active')
+    }
+</script>
+</html>

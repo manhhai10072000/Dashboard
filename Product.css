@@ -1,0 +1,461 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+
+}
+#right-content{
+    position: absolute;
+    right: 0;
+    width:85%;
+    height: 100%;
+}
+/* Menu Trái */
+.nav_left{
+    position: fixed;
+    width: 15%;
+    height: 710px;
+    font-size: 18px;
+    color: #25316D;
+    font-family: sans-serif;
+    padding: 20px 0 0 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#logo{
+    display: none;
+    width: 70px;
+    height: 70px;
+    position:relative;
+    right: 15px;
+}
+#logo img{
+    width: 100%;
+    height: auto;
+}
+.icon_left{
+    padding: 25px 0 0 0;
+}
+.icon_left a{
+    display: flex;
+    color: #1C6758;
+}
+.icon_left i{
+    margin-right: 10px;
+    font-size: 30px;
+}
+a{
+    list-style: none;
+    text-decoration: none;
+}
+/* Menu Trên */
+.nav_top{
+    background-color: #212529;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    color: #9EA9AD;
+    font-family: sans-serif;
+}
+#hamburger{
+    width: 5%;
+    height: 100%;
+    font-size: 25px;
+    padding: 0 0 0 20px;
+    padding-top: 20px;
+}
+#hamburger button{
+    background-color:#212529;
+    color: #455358;
+    font-size: 25px;
+    border: none;
+}
+.search{
+    width: 15%;
+    height: 100%;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.search_button button{
+    border: none;
+    position: relative;
+    bottom: 30px;
+    left: 20px;
+    font-size: 15px;
+    background-color: white;
+    
+}
+.search_input input{
+    width: 300px;
+    height: 33px;
+    padding-left: 45px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.notification{
+    width: 65%;
+    height: 100%;
+    padding-left: 63%;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.user_box{
+    width: 12%;
+    height: 100%;
+    display: flex;
+    margin-left: 10px;
+    padding: 15px 0 0 10px;
+    background-color: #455358;
+}
+.user_box_img{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+}
+.user_box_img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.user_box_title{
+    padding-left: 10px;
+}
+.user_box_name{
+    color: white;
+}
+#right-content.active{
+    width: 95%;
+    transition: 0.7s;
+}
+
+#nav_left.active{
+    width: 5%;
+    transition: 0.7s;
+}
+#h1.active{
+    display: none;
+}
+#logo.active{
+    display: block;
+}
+#icon_left_db.active{
+    display: none;
+}
+#icon_left_w.active{
+    display: none;
+}
+#icon_left_u.active{
+    display: none;
+}
+
+/* View Page */
+.contain{
+    background-color: #ebedee;
+    padding: 20px 20px 0 20px;
+}
+.page_title{
+    width: 100%;
+    font-family: sans-serif;
+    height: 60px;
+    font-size: 30px;
+    font-weight:bold;
+    padding: 20px 0 0 10px;
+}
+
+/* controler */
+.contain{
+    font-family: sans-serif;
+    color:#9EA9AD;
+    width: 100%;
+    height: 90%;
+}
+.page_container{
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    height: 80%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.filter{
+    width: 105px;
+    height: 43px;
+    font-size: 30px;
+    margin: 0 10px 0 0;
+}
+.filter button{
+    width: 100%;
+    height: 100%;
+    background-color: #EEF1FF;
+    border: none;
+    color: #8758FF;
+}
+.filter button i{
+    margin-right: 10px;
+}
+.contronler{
+    display: flex;
+    padding-left: 80%;
+}
+/* View */
+.page_view{
+    margin: 20px 0 0 0;
+}
+.page_view th{
+    width: 10%;
+    text-align: left;
+}
+.user_table{
+    width: 100%;
+}
+.userid{
+    max-width: 20px;
+}
+.page_view td{
+    width: 10%;
+    padding: 10px 0 0 0;
+    padding-right: 20px;
+}
+.page_view td img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+tr{
+    border-bottom: 1px solid black;
+}
+.line{
+    border-bottom: 1px solid black;
+}
+/* filter */
+.filter-dashboards{
+    visibility:hidden;
+    opacity: 0;
+    width: 300px;
+    height: 300px;
+    top: 250px;
+    right: 14%;
+    position: absolute;
+    padding: 10px;
+    transition: 300ms;
+    z-index: -2;
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.filter-dashboards-title{
+    padding: 10px;
+    border-bottom: 1px solid #1C6758;
+}
+.selection{
+    padding: 15px 10px 10px 10px;
+    font-size: 20px;
+}
+.selection select{
+    font-size: 20px;
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+}
+.selection option{
+    font-size: 20px;
+}
+.selection span{
+    display: block;
+}
+.filter-dashboards button{
+    margin: 20px 0 0 180px;
+    width: 80px;
+    height: 40px;
+    background-color: #AAC4FF;
+    border: none;
+    border-radius: 10px;
+}
+#filter-dashboards.active{
+    visibility: inherit;
+    opacity: 1;
+    top:210px;
+    z-index: 1;
+}
+.btnview{
+    width: 80px;
+    height: 30px;
+    font-size: 10px;
+    border-radius: 5px;
+    border: none;
+}
+.btn_actions{
+    display: none;
+    position: relative;
+    background-color: #fff;
+    left: 89%;
+    bottom:63px;
+    padding: 15px 20px 15px 20px;
+    width: 100px;
+    height: 100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.btn_actions button{
+    display: block;
+    border: none;
+    background-color: #fff;
+    width: 60px;
+    margin-bottom: 20px;
+    height: 25px;
+    color: #1C6758;
+    text-align: left;
+    border-radius: 10px;
+}
+#btn_actions.active{
+    display: block;
+}
+#btnview.active{
+    background-color: #8758FF;
+    color: #fff;
+}
+
+/* ADD USER */
+.container_add_user{
+    visibility:hidden;
+    z-index: -2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(242,242,242,0.3);
+    padding: 5% 30%;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+.add_user_box{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: scroll;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.add_user_top{
+    display: flex;
+    padding: 30px 10px;
+    border-bottom: 1px solid #1C6758;
+}
+.add_user_title{
+    width: 50%;
+    font-weight: bold;
+}
+.add_user_btn{
+    width: 50%;
+    padding-left: 45%;
+}
+.add_user_btn button{
+    font-size: 30px;
+    border: none;
+    background-color: #fff;
+}
+.add_user_btn i{
+    border: none;
+    background-color: #fff;
+    color: #1C6758;
+}
+.add_user_bottom{
+    padding: 5%;
+}
+.avatar{
+    margin: 0 0 30px 0;
+}
+.avatar_img{
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    padding: 20px 0 0 0;
+    margin: 0 0 25px 0;
+}
+.avatar_img img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.add_input_container{
+    margin: 20px 0 0 0;
+}
+.add_input_title{
+    font-size: 15px;
+}
+.add_input{
+    width: 100%;
+    height: 40px;
+    margin: 10px 0 0 0;
+}
+.add_input input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #CDF0EA;
+    padding: 0 0 0 15px;
+}
+.select_user_container{
+    display: flex;
+    padding: 30px 0 0 0;
+}
+.select_role{
+    width: 70%;
+    height: auto;
+    padding: 10px;
+}
+.select_role select{
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.select_gender{
+    width: 30%;
+    height: auto;
+    padding: 10px;
+}
+.select_gender select{
+    width: 100%;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.select_gender option{
+    border: none;
+}
+.btn_user_container{
+    display: flex;
+    padding: 15px 0 0 60%;
+}
+.btn_add_cf{
+    width: 120px;
+    height: 45px;
+}
+.btn_add_cf button{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #8758FF;
+    border: none;
+    color: #fff;
+}
+.btn_reset{
+    width: 120px;
+    height: 45px;
+    margin: 0 20px 0 0;
+}
+.btn_reset button{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+}
+#container_add_user.active{
+    visibility: inherit;
+    z-index: 1;
+}
